@@ -38,6 +38,7 @@ extension LoginView {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
+        stackView.distribution = .equalCentering
         stackView.spacing = 0
         
         usernameTextField.delegate = self

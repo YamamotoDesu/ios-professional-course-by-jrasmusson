@@ -10,6 +10,7 @@ import Lottie
 
 class LoginViewController: UIViewController {
     
+    let applicationLabel = UILabel()
     let animationView = AnimationView()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
@@ -32,6 +33,11 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func style() {
+        applicationLabel.translatesAutoresizingMaskIntoConstraints = false
+        applicationLabel.text = "Bankey"
+        applicationLabel.textColor = .black
+        applicationLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        
         animationView.translatesAutoresizingMaskIntoConstraints = false
         let animation = Animation.named("bear", animationCache: LRUAnimationCache.sharedCache)
         animationView.frame = self.view.bounds
@@ -57,10 +63,18 @@ extension LoginViewController {
     }
     
     private func layout() {
+        view.addSubview(applicationLabel)
         view.addSubview(animationView)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
+        
+        // ApplicationLabel
+        NSLayoutConstraint.activate([
+            applicationLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            applicationLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: view.topAnchor, multiplier: 5),
+            applicationLabel.bottomAnchor.constraint(equalToSystemSpacingBelow: animationView.topAnchor, multiplier: 3)
+        ])
         
         // AnimationView
         NSLayoutConstraint.activate([
@@ -72,16 +86,18 @@ extension LoginViewController {
         
         // LoginView
         NSLayoutConstraint.activate([
+            loginView.heightAnchor.constraint(equalToConstant: 80),
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 1)
+            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 4),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 4)
         ])
         
         // Button
         NSLayoutConstraint.activate([
-            signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
-            signInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
-            signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+            signInButton.heightAnchor.constraint(equalToConstant: 50),
+            signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 5),
+            signInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            signInButton.widthAnchor.constraint(equalTo: loginView.widthAnchor, multiplier: 1)
         ])
         
         // ErrorLabel
