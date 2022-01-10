@@ -1,0 +1,6 @@
+framework module Pods_Bankey {
+  umbrella header "Pods-Bankey-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 class LoginViewController: UIViewController {
     
+    let animationView = AnimationView()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
@@ -30,6 +32,13 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func style() {
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        let animation = Animation.named("bear", animationCache: LRUAnimationCache.sharedCache)
+        animationView.frame = self.view.bounds
+        animationView.animation = animation
+        animationView.loopMode = .loop
+        animationView.play()
+        
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -48,9 +57,18 @@ extension LoginViewController {
     }
     
     private func layout() {
+        view.addSubview(animationView)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
+        
+        // AnimationView
+        NSLayoutConstraint.activate([
+            animationView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            animationView.bottomAnchor.constraint(equalToSystemSpacingBelow: loginView.topAnchor, multiplier: 3),
+            animationView.widthAnchor.constraint(equalToConstant: 300),
+            animationView.heightAnchor.constraint(equalToConstant: 300)
+        ])
         
         // LoginView
         NSLayoutConstraint.activate([
