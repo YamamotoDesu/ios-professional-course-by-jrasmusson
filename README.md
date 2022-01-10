@@ -4,7 +4,7 @@
         <tr>
             <th>Login Image</th>
         </tr>
-        <td><img src="https://github.com/YamamotoDesu/TableViewController/blob/main/ReadMe/gif/Complete.gif" width="300"></td>
+        <td><img src="https://github.com/YamamotoDesu/ios-professional-course-by-jrasmusson/blob/main/Bankey/Gif/loginImage.gif" width="300"></td>
     </tr>
 </table>
 
