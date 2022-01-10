@@ -33,7 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-## Set a dividerView 
+## Other
+### Set a dividerView 
 <img width="1133" src="https://user-images.githubusercontent.com/47273077/148717660-fec83219-0ab0-4074-af74-d4255f0dd2c8.png">
 
 
