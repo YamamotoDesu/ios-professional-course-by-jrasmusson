@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ### Set a dividerView 
 <img width="1133" src="https://user-images.githubusercontent.com/47273077/148717660-fec83219-0ab0-4074-af74-d4255f0dd2c8.png">
 
-### Set a indicator in UIButton
+### Set an indicator in UIButton
 <img width="1042" src="https://user-images.githubusercontent.com/47273077/148739221-4e965441-6baa-4d87-a822-800110cd17d1.png">
 
 
