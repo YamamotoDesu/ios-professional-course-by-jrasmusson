@@ -2,7 +2,7 @@
 <table border="0">
     <tr>
         <tr>
-            <th>Login Image</th>
+            <th>Login Loading Image</th>
         </tr>
         <td><img src="https://github.com/YamamotoDesu/ios-professional-course-by-jrasmusson/blob/main/Bankey/Gif/loginImage.gif" width="300"></td>
     </tr>
