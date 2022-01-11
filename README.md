@@ -1,4 +1,13 @@
 # [ios-professional-course-by-jrasmusson(WIP)](https://www.udemy.com/course/the-swift-arcade-professional-ios-development-course-uikit/)
+<table border="0">
+    <tr>
+        <tr>
+            <th>Login Loading Image</th>
+        </tr>
+        <td><img src="https://github.com/YamamotoDesu/ios-professional-course-by-jrasmusson/blob/main/Bankey/Gif/loginImage.gif" width="300"></td>
+    </tr>
+</table>
+
 
 ## Create a new project without storyboards 
 1. Delete SceneDelegate and delete Main.storyboard 
@@ -32,6 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 ```
+
+
+## Set Vector img
+### Check perserve vector data
+<img width="830" alt="preserve-vector" src="https://user-images.githubusercontent.com/47273077/149035681-e6a7fbe8-2d73-4663-9e3e-0a0e61b7fab3.png">
+
+### Set scales as Single Scale
+<img width="886" alt="set-scales" src="https://user-images.githubusercontent.com/47273077/149035763-d2ef632c-8d2b-4b1f-9d3a-26a881491f76.png">
 
 ## Other
 ### Set a dividerView 
