@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController {
     private func style() {
+        
         applicationLabel.translatesAutoresizingMaskIntoConstraints = false
         applicationLabel.text = "Bankey"
         applicationLabel.textColor = .black
