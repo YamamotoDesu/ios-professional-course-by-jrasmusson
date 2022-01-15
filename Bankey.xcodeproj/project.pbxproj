@@ -17,6 +17,8 @@
 		7B2D76E6278C415E00A02A46 /* loginImage.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B2D76E5278C415D00A02A46 /* loginImage.gif */; };
 		7B2D76E9278C4E2F00A02A46 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D76E8278C4E2F00A02A46 /* OnboardingContainerViewController.swift */; };
 		7B2D76EB278E46CD00A02A46 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D76EA278E46CD00A02A46 /* OnboardingViewController.swift */; };
+		7B2D76ED278FA06500A02A46 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D76EC278FA06500A02A46 /* DummyViewController.swift */; };
+		7B2D76F02792458500A02A46 /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D76EF2792458400A02A46 /* LocalState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		7B2D76E5278C415D00A02A46 /* loginImage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loginImage.gif; sourceTree = "<group>"; };
 		7B2D76E8278C4E2F00A02A46 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		7B2D76EA278E46CD00A02A46 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7B2D76EC278FA06500A02A46 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		7B2D76EF2792458400A02A46 /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		F2CC4288C4725B8E3462A860 /* Pods_Bankey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bankey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +73,7 @@
 		7B2D76C5278BB65E00A02A46 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				7B2D76EE279244FB00A02A46 /* Utils */,
 				7B2D76E4278C40BF00A02A46 /* Gif */,
 				7B2D76E1278C324000A02A46 /* Animation */,
 				7B2D76E7278C4DC800A02A46 /* Onboarding */,
@@ -92,8 +97,9 @@
 		7B2D76DC278BC10200A02A46 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				7B2D76CA278BB65E00A02A46 /* LoginViewController.swift */,
 				7B2D76DF278BC15A00A02A46 /* LoginView.swift */,
+				7B2D76CA278BB65E00A02A46 /* LoginViewController.swift */,
+				7B2D76EC278FA06500A02A46 /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -121,6 +127,14 @@
 				7B2D76EA278E46CD00A02A46 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		7B2D76EE279244FB00A02A46 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7B2D76EF2792458400A02A46 /* LocalState.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		88651D774FECDADC1C0A1033 /* Pods */ = {
@@ -257,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B2D76E0278BC15A00A02A46 /* LoginView.swift in Sources */,
+				7B2D76F02792458500A02A46 /* LocalState.swift in Sources */,
+				7B2D76ED278FA06500A02A46 /* DummyViewController.swift in Sources */,
 				7B2D76CB278BB65E00A02A46 /* LoginViewController.swift in Sources */,
 				7B2D76EB278E46CD00A02A46 /* OnboardingViewController.swift in Sources */,
 				7B2D76C7278BB65E00A02A46 /* AppDelegate.swift in Sources */,

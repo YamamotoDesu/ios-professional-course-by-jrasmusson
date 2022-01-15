@@ -8,6 +8,14 @@
 import UIKit
 import Lottie
 
+protocol LoginViewControllerDlegate: AnyObject {
+    func didLogin()
+}
+
+protocol LogoutDlegate: AnyObject {
+    func didLogout()
+}
+
 class LoginViewController: UIViewController {
     
     let applicationLabel = UILabel()
@@ -15,6 +23,8 @@ class LoginViewController: UIViewController {
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    
+    weak var delegate: LoginViewControllerDlegate?
     
     var userName: String? {
         return loginView.usernameTextField.text
@@ -28,6 +38,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        signInButton.configuration?.showsActivityIndicator = false
     }
 }
 
@@ -73,7 +88,7 @@ extension LoginViewController {
         // ApplicationLabel
         NSLayoutConstraint.activate([
             applicationLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            applicationLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: view.topAnchor, multiplier: 5),
+            applicationLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 5),
             applicationLabel.bottomAnchor.constraint(equalToSystemSpacingBelow: animationView.topAnchor, multiplier: 3)
         ])
         
@@ -131,6 +146,7 @@ extension LoginViewController {
         
         if userName == "Yama" && password == "Yama" {
             signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         } else {
             configureView(withMessage: "Incorrect username / password")
         }
@@ -141,4 +157,5 @@ extension LoginViewController {
         errorMessageLabel.text = message
     }
 }
+
 
