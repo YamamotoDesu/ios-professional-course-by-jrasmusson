@@ -66,5 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 <img width="1019" src="https://user-images.githubusercontent.com/47273077/149650623-163792c0-19ed-4ce0-a733-f8160867c414.png">
 5. Associate a cutom class with the created one
 <img width="995" src="https://user-images.githubusercontent.com/47273077/149650650-190ef473-44d5-4679-969c-b8c99289f1ff.png">
-
+6. Outlet the view
+<img width="1085" src="https://user-images.githubusercontent.com/47273077/149650695-9f38915c-a2fc-485f-9490-66118f185105.png">
+ 
 
