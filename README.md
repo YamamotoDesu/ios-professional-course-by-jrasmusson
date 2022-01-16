@@ -57,6 +57,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ### Set an indicator in UIButton
 <img width="1042" src="https://user-images.githubusercontent.com/47273077/148739221-4e965441-6baa-4d87-a822-800110cd17d1.png">
 
-
+### Set a nib file
+1. Create UIView file
+2. Create View with the same name
+3. Set a size as Freeform
+<img width="913" src="https://user-images.githubusercontent.com/47273077/149650606-bd8c6ae1-7ef3-4276-a00c-53f94dda4ad2.png">
+4. Set a height
+<img width="1019" src="https://user-images.githubusercontent.com/47273077/149650623-163792c0-19ed-4ce0-a733-f8160867c414.png">
+5. Associate a cutom class with the created one
+<img width="995" src="https://user-images.githubusercontent.com/47273077/149650650-190ef473-44d5-4679-969c-b8c99289f1ff.png">
 
 
