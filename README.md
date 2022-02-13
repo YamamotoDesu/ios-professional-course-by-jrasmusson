@@ -6,13 +6,25 @@
         </tr>
         <td><img src="https://github.com/YamamotoDesu/ios-professional-course-by-jrasmusson/blob/main/Bankey/Gif/loginImage.gif" width="300"></td>
     </tr>
+    <tr>
         <tr>
+            <th>Onboarding View</th>
+        </tr>
+        <td>
+<img width="446" src="https://user-images.githubusercontent.com/47273077/153743335-f69bcf6a-ef28-4871-aa0a-028fb08570db.png"></td>
+    </tr>
+   <tr>
         <tr>
             <th>Table View</th>
         </tr>
-        <td><img width="490" src="https://user-images.githubusercontent.com/47273077/153743159-c4ffb124-acf1-4621-af81-eb5e8180a788.png"></td>
+        <td><img width="490" src="https://user-images.githubusercontent.com/47273077/153743159-c4ffb124-acf1-4621-af81-eb5e8180a788.png"> </td>
     </tr>
 </table>
+
+
+
+    
+
 
 ## Create a new project without storyboards 
 1. Delete SceneDelegate and delete Main.storyboard 
