@@ -33,6 +33,13 @@ class LoginViewController: UIViewController {
     var password: String? {
         return loginView.passwordTextField.text
     }
+    
+    //animation
+    var centeringEdgeOnScreen: CGFloat = 0
+    var centeringEdgeOffScreen: CGFloat = -1000
+    
+    var titleCenteringAnchor: NSLayoutConstraint?
+    var animationViewCenteringAnchor: NSLayoutConstraint?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +51,11 @@ class LoginViewController: UIViewController {
         super.viewDidDisappear(animated)
         signInButton.configuration?.showsActivityIndicator = false
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
+    }
 }
 
 extension LoginViewController {
@@ -53,11 +65,14 @@ extension LoginViewController {
         applicationLabel.text = "Bankey"
         applicationLabel.textColor = .black
         applicationLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        applicationLabel.alpha = 0
         
         animationView.translatesAutoresizingMaskIntoConstraints = false
         let animation = Animation.named("bear", animationCache: LRUAnimationCache.sharedCache)
         animationView.frame = self.view.bounds
+        animationView.alpha = 0
         animationView.animation = animation
+        animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
         animationView.play()
         
@@ -86,20 +101,27 @@ extension LoginViewController {
         view.addSubview(errorMessageLabel)
         
         // ApplicationLabel
-        NSLayoutConstraint.activate([
-            applicationLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            applicationLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 5),
-            applicationLabel.bottomAnchor.constraint(equalToSystemSpacingBelow: animationView.topAnchor, multiplier: 3)
-        ])
+//        NSLayoutConstraint.activate([
+//            applicationLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            applicationLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 5)
+//        ])
+        
+        applicationLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 5).isActive = true
+        titleCenteringAnchor = applicationLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: centeringEdgeOffScreen)
+        titleCenteringAnchor?.isActive = true
         
         // AnimationView
         NSLayoutConstraint.activate([
-            animationView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            animationView.bottomAnchor.constraint(equalToSystemSpacingBelow: loginView.topAnchor, multiplier: 3),
-            animationView.widthAnchor.constraint(equalToConstant: 300),
-            animationView.heightAnchor.constraint(equalToConstant: 300)
+            animationView.topAnchor.constraint(equalToSystemSpacingBelow: applicationLabel.bottomAnchor, multiplier: 1),
+            animationView.bottomAnchor.constraint(equalTo: loginView.topAnchor),
+            animationView.widthAnchor.constraint(equalToConstant: 200),
+            animationView.heightAnchor.constraint(equalToConstant: 200)
         ])
+        animationViewCenteringAnchor = animationView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: centeringEdgeOffScreen)
+        animationViewCenteringAnchor?.isActive = true
         
+
+//
         // LoginView
         NSLayoutConstraint.activate([
             loginView.heightAnchor.constraint(equalToConstant: 80),
@@ -158,4 +180,30 @@ extension LoginViewController {
     }
 }
 
+// MARK: - Animations
+extension LoginViewController {
+    private func animate() {
+        let animator1 = UIViewPropertyAnimator(duration: 2.0, curve: .easeOut, animations: {
+            self.titleCenteringAnchor?.constant = self.centeringEdgeOnScreen
+            self.view.layoutIfNeeded()
+        })
+        animator1.startAnimation()
+        
+        let animator2 = UIViewPropertyAnimator(duration: 2.0, curve: .easeOut, animations: {
+            self.animationViewCenteringAnchor?.constant = self.centeringEdgeOnScreen
+            self.view.layoutIfNeeded()
+
+        })
+        animator2.startAnimation(afterDelay: 1)
+        
+        let animator3 = UIViewPropertyAnimator(duration: 4.0, curve: .easeOut, animations: {
+            self.applicationLabel.alpha = 1.0
+            self.animationView.alpha = 1.0
+            self.view.layoutIfNeeded()
+        })
+        animator3.startAnimation()
+        // applicationLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        // applicationLabel.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 5)
+    }
+}
 
