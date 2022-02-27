@@ -2,7 +2,7 @@
 <table>
   <tr>
     <td valign="top"><img width="300" src="https://github.com/YamamotoDesu/ios-professional-course-by-jrasmusson/blob/main/Bankey/Gif/loginImage.gif"/></td>
-    <td valign="top"><img width="841"  src="https://user-images.githubusercontent.com/47273077/155275258-6ab6210e-0282-4686-b023-a6ecc7b2d526.png"/></td>
+    <td valign="top"><img width="300"  src="https://github.com/YamamotoDesu/ios-professional-course-by-jrasmusson/blob/main/Bankey/Gif/shakey-button.gif"/></td>
   </tr>
 </table>
 <table border="0">
@@ -17,14 +17,10 @@
         <tr>
             <th>Table View</th>
         </tr>
-        <td><img width="490" src="https://user-images.githubusercontent.com/47273077/153743159-c4ffb124-acf1-4621-af81-eb5e8180a788.png"> </td>
+        <td><img width="490" src="https://user-images.githubusercontent.com/47273077/155867782-6181c2a6-bf9d-4071-9892-6bb61c577f27.png">
+</td>
     </tr>
 </table>
-
-
-
-    
-
 
 ## Create a new project without storyboards 
 1. Delete SceneDelegate and delete Main.storyboard 
