@@ -1,11 +1,11 @@
 # [ios-professional-course-by-jrasmusson(WIP)](https://www.udemy.com/course/the-swift-arcade-professional-ios-development-course-uikit/)
+<table>
+  <tr>
+    <td valign="top"><img width="300" src="https://github.com/YamamotoDesu/ios-professional-course-by-jrasmusson/blob/main/Bankey/Gif/loginImage.gif"/></td>
+    <td valign="top"><img width="841"  src="https://user-images.githubusercontent.com/47273077/155275258-6ab6210e-0282-4686-b023-a6ecc7b2d526.png"/></td>
+  </tr>
+</table>
 <table border="0">
-    <tr>
-        <tr>
-            <th>Login Loading Image</th>
-        </tr>
-        <td><img src="https://github.com/YamamotoDesu/ios-professional-course-by-jrasmusson/blob/main/Bankey/Gif/loginImage.gif" width="300"></td>
-    </tr>
     <tr>
         <tr>
             <th>Onboarding View</th>
