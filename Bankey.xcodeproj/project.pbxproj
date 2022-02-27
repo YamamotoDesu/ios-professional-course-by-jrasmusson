@@ -22,6 +22,7 @@
 		7B2D76F22792AF5400A02A46 /* UIViewController+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2D76F12792AF5300A02A46 /* UIViewController+UIKit.swift */; };
 		7B7C432C27CB140600066779 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C432B27CB140600066779 /* ShakeyBellView.swift */; };
 		7B7C435127CB2F0C00066779 /* shakey-button.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C435027CB2F0C00066779 /* shakey-button.gif */; };
+		7B7C435327CB30BF00066779 /* login-animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C435227CB30BE00066779 /* login-animation.gif */; };
 		7B810B7A27B67BF9001FB218 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B810B7927B67BF9001FB218 /* AccountSummaryCell.swift */; };
 		7B810B7C27B8AE11001FB218 /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B810B7B27B8AE11001FB218 /* Decimal+Utils.swift */; };
 		7B810B7E27B8AEB1001FB218 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B810B7D27B8AEB1001FB218 /* CurrencyFormatter.swift */; };
@@ -63,6 +64,7 @@
 		7B2D76F12792AF5300A02A46 /* UIViewController+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIKit.swift"; sourceTree = "<group>"; };
 		7B7C432B27CB140600066779 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		7B7C435027CB2F0C00066779 /* shakey-button.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "shakey-button.gif"; sourceTree = "<group>"; };
+		7B7C435227CB30BE00066779 /* login-animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "login-animation.gif"; sourceTree = "<group>"; };
 		7B810B7927B67BF9001FB218 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		7B810B7B27B8AE11001FB218 /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		7B810B7D27B8AEB1001FB218 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		7B2D76E4278C40BF00A02A46 /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				7B7C435227CB30BE00066779 /* login-animation.gif */,
 				7B7C435027CB2F0C00066779 /* shakey-button.gif */,
 				7B2D76E5278C415D00A02A46 /* loginImage.gif */,
 			);
@@ -342,6 +345,7 @@
 				7B2D76E6278C415E00A02A46 /* loginImage.gif in Resources */,
 				7B2D76D0278BB66600A02A46 /* Assets.xcassets in Resources */,
 				7B7C435127CB2F0C00066779 /* shakey-button.gif in Resources */,
+				7B7C435327CB30BF00066779 /* login-animation.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
