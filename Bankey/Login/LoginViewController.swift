@@ -63,7 +63,7 @@ extension LoginViewController {
         
         applicationLabel.translatesAutoresizingMaskIntoConstraints = false
         applicationLabel.text = "Bankey"
-        applicationLabel.textColor = .black
+        applicationLabel.textColor = .systemTeal
         applicationLabel.font = UIFont.boldSystemFont(ofSize: 30)
         applicationLabel.alpha = 0
         
