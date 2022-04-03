@@ -24,6 +24,8 @@
 		7B71FE4D27F9800400E0FE8F /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B71FE4C27F9800400E0FE8F /* AccountSummaryViewController+Networking.swift */; };
 		7B71FE5127F98F6B00E0FE8F /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B71FE5027F98F6B00E0FE8F /* ProfileTests.swift */; };
 		7B71FE5327F990FE00E0FE8F /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B71FE5227F990FE00E0FE8F /* AccountTests.swift */; };
+		7B71FE5527F9B67800E0FE8F /* SkeletonLodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B71FE5427F9B67800E0FE8F /* SkeletonLodable.swift */; };
+		7B71FE5727F9B8A700E0FE8F /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B71FE5627F9B8A700E0FE8F /* SkeletonCell.swift */; };
 		7B7C432C27CB140600066779 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C432B27CB140600066779 /* ShakeyBellView.swift */; };
 		7B7C435127CB2F0C00066779 /* shakey-button.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C435027CB2F0C00066779 /* shakey-button.gif */; };
 		7B7C435327CB30BF00066779 /* login-animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C435227CB30BE00066779 /* login-animation.gif */; };
@@ -70,6 +72,8 @@
 		7B71FE4C27F9800400E0FE8F /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		7B71FE5027F98F6B00E0FE8F /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
 		7B71FE5227F990FE00E0FE8F /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
+		7B71FE5427F9B67800E0FE8F /* SkeletonLodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLodable.swift; sourceTree = "<group>"; };
+		7B71FE5627F9B8A700E0FE8F /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		7B7C432B27CB140600066779 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		7B7C435027CB2F0C00066779 /* shakey-button.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "shakey-button.gif"; sourceTree = "<group>"; };
 		7B7C435227CB30BE00066779 /* login-animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "login-animation.gif"; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				7B810B7927B67BF9001FB218 /* AccountSummaryCell.swift */,
+				7B71FE5427F9B67800E0FE8F /* SkeletonLodable.swift */,
+				7B71FE5627F9B8A700E0FE8F /* SkeletonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -433,6 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B71FE5527F9B67800E0FE8F /* SkeletonLodable.swift in Sources */,
+				7B71FE5727F9B8A700E0FE8F /* SkeletonCell.swift in Sources */,
 				7B2D76E0278BC15A00A02A46 /* LoginView.swift in Sources */,
 				7B71FE4B27F97E3F00E0FE8F /* Date+Utils.swift in Sources */,
 				7B2D76F02792458500A02A46 /* LocalState.swift in Sources */,
