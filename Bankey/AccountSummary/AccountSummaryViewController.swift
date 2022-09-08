@@ -159,13 +159,14 @@ extension AccountSummaryViewController {
         
         group.enter()
         fetchProfile(forUserId: userId) { result in
+            
             switch result {
             case .success(let profile):
                 self.profile = profile
                 self.configureTableHeaderView(with: profile)
 //                self.tableView.reloadData()
             case .failure(let error):
-                print(error.localizedDescription)
+                self.displayError(error)
             }
             group.leave()
         }
@@ -178,7 +179,7 @@ extension AccountSummaryViewController {
                 self.configureTableCells(with: accounts)
 //                self.tableView.reloadData()
             case .failure(let error):
-                print(error.localizedDescription)
+                self.displayError(error)
             }
             group.leave()
         }
@@ -202,6 +203,31 @@ extension AccountSummaryViewController {
                                          accountName: $0.name,
                                          balance: $0.amount)
         }
+    }
+    
+    private func displayError(_ error: NetworkError) {
+        let errorMessage: String
+        let errorTitle: String
+        
+        switch error {
+        case .serverError:
+            errorMessage = "Server Error"
+            errorTitle = "Ensure you are connected to the internet. Please try again."
+        case .decodingError:
+            errorMessage = "Decoding Error"
+            errorTitle = "We could not process your request. Please try again."
+        }
+        self.showErrorAlert(title: errorMessage, message: errorTitle)
+    }
+    
+    private func showErrorAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 
